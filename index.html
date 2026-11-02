@@ -48,6 +48,8 @@ td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
 .box ul{margin:0;padding-left:18px;color:var(--muted)}
 .box li{margin:4px 0}
 .note{font-size:14px;color:var(--muted);margin-top:14px}
+.nav{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;border:1.5px solid var(--ink);border-radius:999px;padding:6px 14px}.nav a:hover{background:var(--ink);color:var(--bg)}
+html{scroll-behavior:smooth}
 footer{padding:32px 0 64px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 @media (max-width:720px){.hero{grid-template-columns:1fr}.vid.big{max-width:340px}header{padding-top:36px}}
 </style>
@@ -58,10 +60,11 @@ footer{padding:32px 0 64px;border-top:1px solid var(--line);color:var(--muted);f
 <header>
   <span class="tag">Spec work</span>
   <p class="lede">Hi, I'm Jake Kulagin, a motion designer. I read your Motion Graphics Designer posting and built this sample for you. It is one tax-season ad, set up so your paid media team can test it. Take a look.</p>
+  <p class="nav"><a href="#c1">Concept 1: Refund clock</a><a href="#c2">Concept 2: Pile to done</a></p>
 </header>
 
-<section>
-  <h2>The ad: "Refund clock"</h2>
+<section id="c1">
+  <h2>Concept 1: "Refund clock"</h2>
   <div class="hero">
     <div class="vid big" data-file="videos/HRB_C1_916_20s_HA_E1.mp4">
       <video src="videos/HRB_C1_916_20s_HA_E1.mp4" controls autoplay muted loop playsinline preload="metadata"></video>
@@ -116,6 +119,64 @@ footer{padding:32px 0 64px;border-top:1px solid var(--line);color:var(--muted);f
     </table>
   </div>
   <p class="note"><b>Order:</b> Hook C against A first. Then End card 2 against 1 on the winning hook. Hook B only in the January flight.</p>
+</section>
+
+<section id="c2">
+  <h2>Concept 2: "Pile to done"</h2>
+  <div class="hero">
+    <div class="vid big" data-file="videos/HRB_C2_916_20s_HA_E1.mp4">
+      <video src="videos/HRB_C2_916_20s_HA_E1.mp4" controls muted loop playsinline preload="metadata"></video>
+    </div>
+    <div class="facts">
+      <div><b>Goal</b>Get a filer to start a return.</div>
+      <div><b>Audience</b>US adults who file their own taxes and doubt they should.</div>
+      <div><b>Channels</b>Paid social, video, connected TV, display. This piece: 9:16, 20 s, sound off.</div>
+      <div><b>Brand</b>Colors and logo read from hrblock.com. Type is Inter, a stand-in for Graphik.</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>The test family</h2>
+  <div class="grid">
+    <div class="cell">
+      <div class="vid" data-file="videos/HRB_C2_916_20s_HA_E1.mp4"><video src="videos/HRB_C2_916_20s_HA_E1.mp4" controls muted loop playsinline preload="metadata"></video></div>
+      <h3>Control</h3><p>Hook A + End card 1</p><span class="chg">Baseline</span>
+    </div>
+    <div class="cell">
+      <div class="vid" data-file="videos/HRB_C2_916_20s_HB_E1.mp4"><video src="videos/HRB_C2_916_20s_HB_E1.mp4" controls muted loop playsinline preload="metadata"></video></div>
+      <h3>Hook B</h3><p>Finished checklist bursts back into the pile</p><span class="chg">Changes: first 2 s</span>
+    </div>
+    <div class="cell">
+      <div class="vid" data-file="videos/HRB_C2_916_20s_HC_E1.mp4"><video src="videos/HRB_C2_916_20s_HC_E1.mp4" controls muted loop playsinline preload="metadata"></video></div>
+      <h3>Hook C</h3><p>"Sort your taxes in one place."</p><span class="chg">Changes: first 2 s</span>
+    </div>
+    <div class="cell">
+      <div class="vid" data-file="videos/HRB_C2_916_20s_HA_E2.mp4"><video src="videos/HRB_C2_916_20s_HA_E2.mp4" controls muted loop playsinline preload="metadata"></video></div>
+      <h3>End card 2</h3><p>"Nearly 52% qualify to file free."</p><span class="chg">Changes: last 3 s</span>
+    </div>
+    <div class="cell">
+      <div class="vid" data-file="videos/HRB_C2_916_06s_HA_E1.mp4"><video src="videos/HRB_C2_916_06s_HA_E1.mp4" controls muted loop playsinline preload="metadata"></video></div>
+      <h3>6 s cut-down</h3><p>Hook, one question, end card.</p><span class="chg">For short placements</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Test plan <span style="font-weight:400;font-size:16px;color:var(--muted)">(hypotheses, no real data)</span></h2>
+  <div class="scroll">
+    <table>
+      <thead><tr><th>Test</th><th>Impact</th><th>Confidence</th><th>Ease</th><th>ICE</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Hook A (control)</td><td class="n">6</td><td class="n">7</td><td class="n">10</td><td class="n ice">7.7</td><td>A falling pile names the pain in second 1.</td></tr>
+        <tr><td>Hook B</td><td class="n">7</td><td class="n">5</td><td class="n">9</td><td class="n ice">7.0</td><td>Before and after reveals hold well. Risk: the payoff is spent in second 1.</td></tr>
+        <tr><td>Hook C</td><td class="n">6</td><td class="n">4</td><td class="n">9</td><td class="n ice">6.3</td><td>Words first, picture late. Weaker thumb-stop likely, better intent.</td></tr>
+        <tr><td>End card 1 (control)</td><td class="n">5</td><td class="n">6</td><td class="n">10</td><td class="n ice">7.0</td><td>Baseline. The line repeats what the viewer saw.</td></tr>
+        <tr><td>End card 2</td><td class="n">7</td><td class="n">6</td><td class="n">9</td><td class="n ice">7.3</td><td>Same card as concept 1. Run it here only if it won there.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note"><b>Order:</b> Hook B against A first. Then End card 2 against 1 on the winning hook. Then Hook C.</p>
 </section>
 
 <footer>
